@@ -2,7 +2,7 @@ package com.campusdual.classroom;
 
 public class Tractor implements IMachine{
 
-	protected int horsePower = 0;
+	protected int horsePower;
 	
 	public Tractor(int hp) {
 		this.horsePower = hp;

@@ -24,6 +24,7 @@ public class Plane implements IMachine{
 	@Override
 	public void start() {
 		takeOff();
+		System.out.println("Nombre: "+getName());
 	}
 
 	@Override
@@ -35,4 +36,8 @@ public class Plane implements IMachine{
 	public void maintenance() {
         fly();
 	}
+
+    public String getName() {
+        return name;
+    }
 }

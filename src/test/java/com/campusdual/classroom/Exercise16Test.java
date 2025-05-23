@@ -12,7 +12,7 @@ class Exercise16Test {
     void testIMachineInterface() {
         Tractor tractor = new Tractor(3000);
         Plane plane = new Plane("Plane");
-        assertTrue(tractor instanceof IMachine, "tractor variable is not a instance of IMachine");
-        assertTrue(plane instanceof IMachine, "plane variable is not a instance of IMachine");
+        assertInstanceOf(IMachine.class, tractor, "tractor variable is not a instance of IMachine");
+        assertInstanceOf(IMachine.class, plane, "plane variable is not a instance of IMachine");
     }
 }
