@@ -1,11 +1,12 @@
 package com.campusdual.classroom;
 
-public class Plane{
+public class Plane implements IMachine{
 
 	private final String name;
 
 	public Plane(String name) {
 		this.name = name;
+
 	}
 
 	public void takeOff() {
@@ -18,5 +19,20 @@ public class Plane{
 
 	public void fly() {
 		System.out.println("El avión está volando");
+	}
+
+	@Override
+	public void start() {
+		takeOff();
+	}
+
+	@Override
+	public void stop() {
+        land();
+	}
+
+	@Override
+	public void maintenance() {
+        fly();
 	}
 }
